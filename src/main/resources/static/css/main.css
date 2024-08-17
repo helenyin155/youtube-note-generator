@@ -1,0 +1,465 @@
+@font-face {
+    font-family: 'Qanelas Soft SemiBold';
+    src: url('../fonts/QanelasSoftSemiBold.otf');
+}
+
+
+@font-face {
+    font-family: 'Qanelas Soft Regular';
+    src: url('../fonts/QanelasSoftRegular.otf');
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Qanelas Soft SemiBold';
+    font-size: 100%;
+}
+
+h1{
+    font-family: 'Qanelas Soft SemiBold';
+    margin-left: 5px;
+    font-size: 300%;
+}
+h2{
+    font-family: 'Qanelas Soft SemiBold';
+    margin-left: 20px;
+}
+.logo{
+    background-color: rgb(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.tab {
+    position:absolute;
+    float: right;
+    border: 2px solid #012325;
+    background-color: white;
+    width: 10%;
+    height: 50%;
+    z-index: 15; /* can be any number, but 999 seems taller than everything else*/
+
+}.tab button {
+     display: block;
+     background-color: antiquewhite;
+     color: black;
+     padding: 22px 16px;
+     width: 100%;
+     border: none;
+     outline: none;
+     text-align: center;
+     cursor: pointer;
+     transition: 0.2s;
+     font-family: 'Verdana';
+     font-size: 100%;
+
+ }
+
+.tab button:hover {
+    background-color: #0B5456;
+    color: white;      }
+
+/* later*/
+.tab button.active {
+}
+
+table, th, td {
+    border: 1px solid green;
+    border-collapse: collapse;
+    font-family: Qanelas Soft SemiBold;
+    color: white;
+}
+th, td {
+    background-color: #366667;
+    width: 500px;
+    padding: 15px;
+}
+
+th {
+    text-align: left;
+}
+td{
+    text-align: right;
+}
+table {
+    border-spacing: 10px;
+}
+#selectVideo:hover{
+    background-color: darkslategrey;
+}
+
+#selectVideo{
+    background-color: red;
+    font-family: Qanelas Soft SemiBold;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    width: 100%;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#editName{
+    background-color: #e1e1e1; /*should be trasnsparent*/
+    font-family: Qanelas Soft SemiBold;
+    border: none;
+    color: black;
+    max-width: 100%;
+    max-height: 7%;
+    padding: 5px 1%;
+    display: block;
+    text-align: left;
+    font-size: 140%;
+    cursor: pointer;
+    transition: 0.2s;
+    overflow: hidden;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+
+#errorOutput{
+    color: red;
+    font-size: 100%;
+    margin: 0 auto;
+    text-align: left;
+    margin-left: 1%;
+    display: block;
+    font-family: "Qanelas Soft Regular";
+}
+/*
+login page
+ */
+
+
+
+
+.timeStamp{
+    border-style: solid;
+    border-color: #012325;
+    background-color: white;
+    float: left;
+    padding: 1% 3%;
+    min-width: 17%;
+    width: 17%;
+    font-size: 125%;
+    margin-top: 1%;
+    display: inline;
+    text-align: center;
+    font-family: "Qanelas Soft Regular";
+}
+.noteButton{
+    background-color: #0B5456;
+    padding: 1% 3%;
+    font-size: 125%;
+    display: inline;
+    color:white;
+    margin-top: 1%;
+    font-family:Qanelas Soft SemiBold;
+    border: 1px solid black;
+}
+.noteButton:hover{
+    background-color: cadetblue;
+}
+
+#returnToMain{
+    background-color: indianred;
+    vertical-align: center;
+    padding: 1% 3%;
+    font-size: 75%;
+    display: inline;
+    color:white;
+    margin-top: 1%;
+    float: right;
+    font-family:Qanelas Soft SemiBold;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#newNote:hover{
+    background-color: cadetblue;
+}
+#register{
+    background-color: #ffffff;
+    color: rgb(100,100,100);
+    margin-top: 15px;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+#register:hover{
+    background-color: #f6f6f6;
+}
+
+h1{
+    font-family: 'Qanelas Soft SemiBold';
+    margin-left: 5px;
+    font-size: 300%;
+}
+h2{
+    font-family: 'Qanelas Soft SemiBold';
+    margin-left: 20px;
+}
+#logo2{
+    background-color: rgb(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 1%;
+}
+.input{
+    width: 70%;
+    font-size: 90%;
+    min-width: 70%;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+.input:hover{
+    border: 2px solid #888;
+
+}
+.tab {
+    position: relative;
+    top: 100%;
+    translate: 0 0%;
+    border: 2px solid #012325;
+    background-color: white;
+    width: 35%;
+    height: auto;
+    align-content: center;
+    z-index: 999; /*can be any number but no other z-index on this page xis ever going to be above 999*/
+}
+
+
+.tab button {
+    position:relative;
+    display: block;
+    background-color: lightgray;
+    color: black;
+    padding: 10%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Qanelas Soft Regular';
+    font-size: 120%;
+}
+
+.tab button:hover {
+    background-color: #0B5456;
+    color: white;      }
+
+/* later*/
+.tab button.active {
+}
+#selectVideo:hover{
+    background-color: darkslategrey;
+    border: 2px solid darkslategrey;
+}
+
+#selectVideo{
+    width: 18%;
+    font-size: 90%;
+    min-width: 18%;
+    padding: 12px 24px;
+    transition: 0.2s;
+    border: 2px solid red;
+    background-color: red;
+    font-family: Qanelas Soft SemiBold;
+    color: white;
+    vertical-align: center;
+    border-radius: 0 10px 10px 0;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    margin-left: -1%;
+}
+
+table, th, td {
+    border: 3px solid white;
+    border-collapse: collapse;
+    font-family: Qanelas Soft SemiBold;
+    color: white;
+    margin-left: 1%;
+}
+th, td {
+    background-color: #366667;
+    width: 500px;
+}
+
+th {
+    text-align: left;
+}
+th, td {
+    padding: 15px;
+}
+table {
+    border-spacing: 10px;
+}
+
+#addTxt{
+    font-family: Verdana;
+    width:200%;
+    font-size:120%;
+}
+.btn-group{
+    background-color: #e1e1e1; /*should be trasnsparent*/
+    max-width: 100%;
+    width: 100%;
+    height: 5%;
+    max-height: 15%;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 200%;
+    cursor: pointer;
+    transition: 0.2s;
+    border: black solid 2px;
+    box-sizing: content-box;
+}
+
+.btn-group button {
+    background-color: white;
+    border: 2px white;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+    float: left;
+    width: 7%;
+    height: 100%;
+    box-sizing: content-box;
+
+}
+
+.btn-group button img{
+    vertical-align: center;
+    width: 50%;
+    height: auto;
+}
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #366667;
+}
+.containerLeft{
+    margin-left: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    width: 53%;
+    max-width: 53%;
+    height: 100%;
+    float:left;
+    /*border: black 2px solid;*/
+}
+.containerRight{
+    position: relative;
+    margin-right: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    min-height: 100%;
+    width: 44%;
+    max-width: 44%;
+    float:right;
+    /*border: green 2px solid;*/
+}
+.container{
+    height: 85%;
+    /*border: black 2px solid;*/
+}
+.headerContainer{
+    height: 15%;
+    width: 100%;
+    /*border: black 2px solid;*/
+}
+#noteArea{
+    width: 100%;
+    height: 85%;
+    max-height: 85%;
+    overflow: auto;
+    border: 2px solid #012325;
+    margin: 3px -1px;
+    padding: 0;
+    resize: none;
+    font-family: 'Arial';
+}
+#noteArea:empty:before {
+    content: attr(placeholder);
+    color: #ccc;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Qanelas Soft Regular';
+    font-size: 100%;
+    color: black;
+}
+#username {
+    font-family: 'Qanelas Soft Semibold';
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    translate: 0 -100%;
+    margin: auto auto;
+    text-align: right;
+    display: block;
+    border: none;
+    background-color: white;
+    font-size: 200%;
+    padding: 0 10px;
+    text-decoration: underline;
+}
+
+#v1 {
+    border-left: 6px solid lime;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 367px;
+}
+
+.noteBar{
+    position: absolute;
+    padding: 0;
+    translate: -50% 0;
+    height: 100%;
+    width: 0.75%;
+    background-color: gold;
+    cursor: pointer;
+    border: black solid 1px;
+    box-sizing: border-box;
+}
+.noteBarSelected
+{
+    border: none;
+    /*different than border! this doesn't affect sizing and can overlap*/
+    outline: black solid medium;
+    /*border: black 2px solid;*/
+    background-color: greenyellow;
+}

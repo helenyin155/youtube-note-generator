@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script defer src="../static/js/classes.js" type="text/javascript"></script>
+    <script defer src="../static/js/filefetch.js" type="text/javascript"></script>
+    <script defer src="../static/js/userfetch.js" type="text/javascript"></script>
+    <script defer src="../static/js/youtubefunctions.js" type="text/javascript"></script>
+    <script defer src="../static/js/notetaking.js" type="text/javascript"></script>
+    <title>ENTER NOTE TITLE HERE BY DEFAULT IT IS THE VIDEO NAME</title>
+
+    <link rel="stylesheet" href="../static/css/progressbar.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <style>
+        input[type="text"] {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<iframe id="loading" src="animations.html" style="position:absolute;width: 100%; height: 100%; border: none; z-index: 9999"></iframe>
+<div id="loadingbackground" style="position: absolute;background: white; border: none;width: 100%;height: 100%;z-index: 9990"></div>
+
+<body onload="loadDataFromMainPage()">
+    <meta charset="UTF-8">
+<div class="headerContainer">
+    <div class="containerLeft">
+        <div class="logo">
+            <img src='../static/img/YouTube_full-color_icon_(2017).svg.png' style="width: 13%; height: auto;">
+            <h1>YouTubeNotes</h1>
+        </div>
+    </div>
+    <div class="containerRight">
+<!--        <div class="tab">-->
+<!--            <button class="tablinks" onclick="openPage(event, 'Change Password')">Change Password</button>-->
+<!--            <button class="tablinks" onclick="openPage(event, 'Sign Out')">Sign Out</button>-->
+<!--            <button class="tablinks" onclick="openPage(event, 'Switch Account')">Switch Account</button>-->
+<!--        </div>-->
+        <button id="username" onclick="toggleTab()">Hello, Guest</button>
+    </div>
+</div>
+<div class="container">
+
+    <!-- container for player -->
+
+    <div class="containerLeft">
+
+        <!-- editable name area -->
+        <div id="editName" contenteditable="" oninput="saveFile()"><u style="text-decoration-style: dotted">Untitled</u></div>
+        <iframe id="videoFrame" style="aspect-ratio: 16/9;width: 100%;border: none">
+        </iframe>
+
+        <!-- progress bar -->
+        <div id="myProgress">
+            <!-- other note buttons added here -->
+            <div id="myBar"></div>
+        </div>
+
+        <div id="changingTimeStamp" class="timeStamp">12:03</div>
+        <button id="newNote" class="noteButton" onclick="newNote()">New Note</button>
+        <button id="returnToMain" onclick="returnToMainPage()">Return to Main Page</button>
+    </div>
+
+
+    <!-- this is the notetaking part -->
+    <div class="containerRight">
+        <div class="btn-group">
+            <button onclick="boldText()"><img src="../static/img/bold.png"></button>
+            <button onclick="italicizeText()"><img src="../static/img/italics.png"></button>
+            <button onclick="underlineText()"><img src="../static/img/underline.png"></button>
+            <button onclick="listText()"><img src="../static/img/list.png"></button>
+        </div>
+
+        <div id="noteArea" contenteditable placeholder="Enter notes here..."></div> <!-- this is the note area between the <div> tags-->
+
+        <button id="saveNote" class="noteButton" onclick="saveNote()" style=
+                "color:white;font-family:Qanelas Soft SemiBold">Save Note
+        </button>
+        <div id="timeStamp" class="timeStamp" contenteditable>0:00</div>
+    </div>
+</div>
+</body>
+</html>

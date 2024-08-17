@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/login.css">
+  <script defer src="../static/js/classes.js"></script>
+  <script defer src="../static/js/userfetch.js"></script>
+  <script defer src="../static/js/loginPage.js"></script>
+  <title>YouTubeNotes</title>
+</head>
+<body>
+<div id="container"> <!-- This is the container for the logo and the form, and centers the elements -->
+  <div id="logo">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <img src='../static/img/YouTube_full-color_icon_(2017).svg.png' style="width: 125px; height: auto; margin-right: 20px;">
+    </a>
+
+    <h1 style="font-family: 'Qanelas Soft SemiBold'; font-size:400%">YouTubeNotes</h1>
+  </div>
+
+  <!-- login form -->
+
+
+  <input id="email" class="input" type="text" name="email" placeholder="E-mail">
+  <input id="password" class="input" type="password" name="password" placeholder="Password">
+  <p id="errorOutput"></p>
+  <button id="login" class="button" onclick="validateLoginForm()">Login</button>
+  <button id="register" class="button" onclick="switchMode()">Register</button>
+
+</div>
+
+</body>
+
+</html>
